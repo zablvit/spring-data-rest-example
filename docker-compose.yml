@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+  map:
+    image: map-app
+    ports:
+      - 8080:8080
+    networks:
+      - mapnet
+  mongo:
+    image: mongo
+    networks:
+      - mapnet
+
+networks:
+  mapnet:
